@@ -1,0 +1,73 @@
+.box{
+    
+    background-color: floralwhite;
+    height: 290px;
+    position: relative;
+
+}
+.box h1{
+position: relative;
+top: 130px;
+left: -600px;
+}
+.linev {
+background-color: antiquewhite;
+position: absolute;
+top: 80px;
+left: 190px;
+height: 170px;
+width: 5px;
+}
+.lineh {
+background-color: antiquewhite;
+position: absolute;
+top: 180px;
+left: 150px;
+height: 5px;
+width: 270px;
+}
+
+/* Style for the parent container */
+.content {
+    display: flex;
+    flex-direction: column;  /* Stacks vertically for mobile */
+    gap: 20px;               /* Adds space between the boxes */
+}
+
+/* For larger screens, set boxes side by side */
+@media (min-width: 768px) {
+    .content {
+        flex-direction: row; /* Stacks horizontally on larger screens */
+    }
+}
+
+/* Box1 (Paragraph) Styling */
+.box1 {
+    flex: 2;  /* Takes up more space than box2 */
+    padding: 40px;
+    margin: 60px 30px 70px 30px;
+    border-radius: 8px;         /* Rounded corners */
+    font-size:25px;
+
+   
+}
+
+/* Box2 (To-Do List) Styling */
+.box2 {
+    flex: 1;  /* Takes up less space than box1 */
+    padding: 20px;
+    background-color: #f1f1f1; /* Slightly darker background */
+    border: 1px solid #bbb;     /* Light border */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Style for a to-do list inside box2 */
+.box2 ul {
+    list-style-type: disc;  /* Bullet points */
+    padding-left: 20px;     /* Indent for bullet points */
+}
+
+.box2 ul li {
+    margin-bottom: 10px;    /* Space between list items */
+}
